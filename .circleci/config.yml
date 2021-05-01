@@ -33,7 +33,7 @@ workflows:
       - approval:
           type: approval
           requires:
-            - build-test
+            - build
           filters:
             tags:
               only: /^v.*/
