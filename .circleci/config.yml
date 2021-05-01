@@ -33,7 +33,7 @@ workflows:
       - build:
           filters:
             tags:
-              ignore: /^v.*/
+              ignore: /.*/
 
   build-and-publish:
     jobs:
