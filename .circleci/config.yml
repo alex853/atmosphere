@@ -38,7 +38,7 @@ workflows:
   build-and-publish:
     jobs:
       - build:
-          filters:
+          filters: &filters-build-and-publish
             branches:
               ignore: /.*/
             tags:
@@ -46,3 +46,5 @@ workflows:
       - publish:
           requires:
             - build
+          filters:
+            <<: *filters-build-and-publish
