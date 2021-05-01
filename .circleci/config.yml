@@ -29,7 +29,7 @@ workflows:
   version: 2
   build-and-publish-on-approval:
     jobs:
-      - build-test
+      - build
       - approval:
           type: approval
           requires:
